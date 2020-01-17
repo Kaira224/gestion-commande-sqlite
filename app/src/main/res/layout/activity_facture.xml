@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".activities.CompositionActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="COMMANDE N° : "
+        android:textColor="@color/colorWhite"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textSize="30sp"
+        android:background="@color/design_default_color_primary"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Total :       "
+        android:textColor="@color/design_default_color_primary"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:textSize="30sp" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:text="Details :         "
+        android:textColor="@color/design_default_color_primary"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:textSize="30sp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listArticles">
+        <TableRow
+            android:background="@color/design_default_color_primary"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:text="Code A" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="1"
+                android:text="Libellé" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="1"
+                android:text="Quantité" />
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Retour"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:background="@drawable/buttonstyle"
+            android:id="@+id/cmdBtn"/>
+    </LinearLayout>
+
+</LinearLayout>

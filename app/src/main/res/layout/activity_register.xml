@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_image"
+    android:gravity="center_horizontal"
+    tools:context=".activities.RegisterActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:srcCompat="@drawable/logo2"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:errorEnabled="true"
+        android:textColorHint="@color/colorWhite"
+        app:boxBackgroundColor="@color/colorWhite"
+        android:id="@+id/userLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom d'utilisateur"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"/>
+        <!-- android:drawableLeft="@drawable/user"-->
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:errorEnabled="true"
+        android:textColorHint="@color/colorWhite"
+        app:boxBackgroundColor="@color/colorWhite"
+        android:id="@+id/passwordLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Mot de passe"
+            android:textSize="20sp"
+
+            android:textColor="@color/colorWhite" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:checkedButton="@+id/first"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/colorWhite"
+        android:outlineAmbientShadowColor="@color/colorWhite"
+        android:id="@+id/gender">
+        <RadioButton
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homme"
+            android:textSize="20sp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/colorWhite" />
+        <RadioButton
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femme"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/colorWhite"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/buttonstyle"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:text="Inscription" />
+</LinearLayout>

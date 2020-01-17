@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".activities.CompositionActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="COMMANDE N° : "
+        android:textColor="@color/colorWhite"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textSize="30sp"
+        android:background="@color/design_default_color_primary"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Composition : "
+        android:fontFamily="monospace"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:background="@color/colorWhite"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Code Article : "
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorWhite"
+            android:id="@+id/textArticle"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/textArticle"
+            android:layout_toRightOf="@+id/textArticle" />
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="@color/design_default_color_primary"
+        app:boxBackgroundColor="@color/colorWhite"
+        android:id="@+id/libelleLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/libelleArticle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Libellé Article"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:textColor="@color/design_default_color_primary"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="@color/design_default_color_primary"
+        app:boxBackgroundColor="@color/colorWhite"
+        android:id="@+id/quantiteLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/qteArticle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantité Article"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:textColor="@color/design_default_color_primary"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AJOUTER"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:background="@drawable/buttonstyle"
+            android:id="@+id/addBtn"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Facture"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:background="@drawable/buttonstyle"
+            android:id="@+id/factureBtn"/>
+    </LinearLayout>
+
+</LinearLayout>
